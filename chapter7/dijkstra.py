@@ -1,7 +1,10 @@
 graph = {}
+graph["start"] = {}
 graph["start"]["a"] = 6
 graph["start"]["b"] = 2
+graph["a"] = {}
 graph["a"]["finish"] = 1
+graph["b"] = {}
 graph["b"]["a"] = 3
 graph["b"]["finish"] = 5
 graph["finish"] = {}
@@ -43,3 +46,5 @@ while node is not None:
             parents[n] = node
     processed.append(node)
     node = find_lowest_cost_node(costs)
+
+print(parents)
